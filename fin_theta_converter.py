@@ -267,7 +267,7 @@ class FinConverterApp:
         self.entry_file_t.grid(row=1, column=2, columnspan=2, sticky=tk.EW, padx=4)
         ttk.Label(inputs, text="строка начала:").grid(row=1, column=4, padx=4)
         self.entry_start_t = ttk.Entry(inputs, width=5)
-        self.entry_start_t.insert(0, "1")
+        self.entry_start_t.insert(0, "4")  # для GraphLab T данные обычно со строки 4
         self.entry_start_t.grid(row=1, column=5, padx=8)
 
         inputs.columnconfigure(2, weight=1)
@@ -463,7 +463,7 @@ class FinConverterApp:
             theta_path = Path(theta_name) if Path(theta_name).is_absolute() else out_dir_path / theta_name
 
             write_output(xi, theta, xi_path, theta_path, log=self.log)
-            self.log(f"Готово: записано {len(xi)} строк — ξ в «{xi_path.name}», "
+            self.log(f"Готово: записано {len(xi)} значений — ξ в «{xi_path.name}», "
                      f"θ в «{theta_path.name}»")
         except Exception as exc:  # noqa: BLE001 — любые ошибки показываем в UI
             self.log(f"Ошибка: {exc}")
