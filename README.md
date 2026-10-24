@@ -27,7 +27,8 @@
    python fin_theta_converter.py
    ```
 
-2. **Портативный .exe** (сборка через PyInstaller, не входит в репозиторий):
+2. **Портативный .exe** — готовый `fin_theta_converter.exe` лежит в корне репозитория
+   и прилагается к релизам. Пересобрать:
 
    ```bat
    pip install pyinstaller
@@ -83,6 +84,7 @@
 
 ```
 fin_theta_converter.py   — всё приложение (GUI + парсинг + расчёт)
+fin_theta_converter.exe  — готовая portable-сборка (PyInstaller)
 in/                      — примеры входных .dat-файлов (x.dat, result_*.dat)
-.gitignore               — исключения: *.exe, build/, dist/, out/ и т.д.
+.gitignore               — исключения: build/, dist/, out/, __pycache__ и т.д.
 ```
