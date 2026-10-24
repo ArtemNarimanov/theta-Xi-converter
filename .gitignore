@@ -1,0 +1,13 @@
+# Артефакты сборки
+*.exe
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+
+# Сгенерированный вывод приложения
+out/
+gui_test_out/
