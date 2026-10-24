@@ -1,5 +1,4 @@
 # Артефакты сборки
-*.exe
 build/
 dist/
 *.spec
